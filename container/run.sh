@@ -12,7 +12,7 @@ METHOD="all"                     # "all" | "mace" | "obi"
 DIHEDRAL="all"                   # "all" | "[a,b,c,d]" | "print"  (0-based indices)
 CONF_ANALYSIS="false"            # "true" | "false" | "none"
 BCS="false"                      # "true" | "false" | "none"
-MCS="false"                      # "true" | "false" | "none"
+MCS="true"                       # "true" | "false" | "none"
 N_CONF=50                        # number of conformers
 RMSD=0.5                         # RMSD pruning threshold
 
