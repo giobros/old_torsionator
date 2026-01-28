@@ -32,5 +32,5 @@ apptainer exec \
     --conf_analysis "$CONF_ANALYSIS" \
     --BCS "$BCS" \
     --MCS "$MCS" \
-    --N "$N_CONF" \
+    --n_confs "$N_CONF" \
     --RMSD "$RMSD"
