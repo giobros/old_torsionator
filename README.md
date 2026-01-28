@@ -47,7 +47,7 @@ The modification needed are:
    --conf_analysis true|false \
    --BCS true|false \
    --MCS true|false \
-   --N \
+   --n_confs \
    --RMSD \
 ```
 Suggestion: print the dihedrals before passing the wanted one, the code should recognize your input but my suggestion is to check the code-preferred dihedral definition.
@@ -88,7 +88,7 @@ If MCS = true:
 ├── conformers/
 │   ├── pdb/*.pdb 
 │   └──  method/      
-│        └── N folders/minimized.pdb  
+│        └── n_confs folders/minimized.pdb  
 ├── scanning/
 │     └── a_b_c_d/
 │       ├── method/                     # MDGX torsion fit
