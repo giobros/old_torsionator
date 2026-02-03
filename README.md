@@ -50,6 +50,7 @@ The modification needed are:
    --MCS true|false \
    --n_confs \
    --RMSD \
+   --multiplicity \
 ```
 Suggestion: print the dihedrals before passing the wanted one, the code should recognize your input but my suggestion is to check the code-preferred dihedral definition.
 
