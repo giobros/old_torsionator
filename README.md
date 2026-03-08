@@ -51,6 +51,8 @@ The modification needed are:
    --n_confs \
    --RMSD \
    --multiplicity \
+   --step_size \
+   --double_rotation true|false \ (if MCS = true)
 ```
 Suggestion: print the dihedrals before passing the wanted one, the code should recognize your input but my suggestion is to check the code-preferred dihedral definition.
 
@@ -94,6 +96,7 @@ If MCS = true:
 ├── scanning/
 │     └── a_b_c_d/
 │       ├── method/                     # MDGX torsion fit
+│       │   ├── n_confs folders + (n_confs_ccw folders)
 │       │   └──  MCS/
 │       │       ├── angles_vs_energies_final.txt   # sorted & min-shifted
 │       │       ├── geometries.xyz
