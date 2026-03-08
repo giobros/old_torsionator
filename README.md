@@ -113,7 +113,7 @@ If MCS = true:
 
 
 ```
-The workflow togheter with the rrors that stop it (e.g., clashes without --conf_scanning true) are written to:
+The workflow togheter with the errors are written to:
 ```
 /data/workflow.log
 ```
