@@ -58,28 +58,32 @@ Suggestion: print the dihedrals before passing the wanted one, the code should r
 ## 5. **Where outputs are written**<br>
 By default the script uses BASE_DIR = "/data"
 You will find results under the following directories on the host inside your bound folder:
+
+If BCS=true
 ```
 /<your_folder>/
 ├── conformers/
 │   ├── pdb/*.pdb 
-│   ├── OBI/
-│   │   ├── initial_energies.txt
-│   │   ├── optimized_energies.txt
-│   │   ├── sorted_energies.txt
-│   │   ├── min_energy.txt
-│   │   ├── xyz/
-│   │   └── *.pdb  
-│   └── MACE/ ... (same layout)
+│   └── method/
+│      ├── initial_energies.txt
+│      ├── optimized_energies.txt
+│      ├── sorted_energies.txt
+│      ├── min_energy.txt
+│      ├── xyz/
+│      └── *.pdb  
+│   
 ├── scanning/
 │     └── a_b_c_d/
-│       ├── OBI/
+│       ├── method/
 │       │   ├── geometries.xyz
 │       │   ├── angles_vs_energies.txt
 │       │   ├── angles_vs_energies_final.txt   # sorted & min-shifted
 │       │   ├── energies.dat                   # single-column, Hartree, min=0 
 │       │   ├── scan_pdbs/*.pdb
-│       │   └── obi.dat                        # MDGX torsion fit
-│       ├── MACE/ ... (same layout)
+│       │   └── output                       # MDGX torsion fit
+│       │         └──hrst/hrst.dat
+│       ├── GAFF2/old/method/           ← old GAFF2 fit
+│       ├── GAFF2/new/method/  
 │       └── a_b_c_d.png                        # plotted profile (kcal/mol)
 └── parameters/<ROOT>_<method>.frcmod  # frcmod with updated DIHE lines
 
@@ -94,13 +98,16 @@ If MCS = true:
 │        └── n_confs folders/minimized.pdb  
 ├── scanning/
 │     └── a_b_c_d/
-│       ├── method/                     # MDGX torsion fit
-│       │   ├── n_confs folders + (n_confs_ccw folders)
+│       ├── method/                     
+│       │   ├── n_confs folders (+ n_confs_ccw)/scan_pdbs/*.pdb
 │       │   └──  MCS/
 │       │       ├── angles_vs_energies_final.txt   # sorted & min-shifted
 │       │       ├── geometries.xyz
 │       │       ├── energies.dat
-│       │       └── method.dat
+│       │       └── output                       # MDGX torsion fit
+│       │         └──hrst/hrst.dat
+│       ├── GAFF2/old/method/           ← old GAFF2 fit
+│       ├── GAFF2/new/method/  
 │       └── a_b_c_d_MCS.png                        # plotted profile (kcal/mol)
 └── parameters/<ROOT>_<method>.frcmod  # frcmod with updated DIHE lines
 
