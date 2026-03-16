@@ -1,4 +1,5 @@
-# Torsionator                                 <img width="89" height="101 alt="logo" src="https://github.com/user-attachments/assets/7a155aa3-59c8-4ef4-8a22-b8eb6192b0fa" />
+# Torsionator                                 <img width="89" height="101" alt="logo" src="https://github.com/user-attachments/assets/a0e37877-48a5-4fb0-be50-cfb5099169c0" />
+
 
 
 ## 1. **Overview** <br>
