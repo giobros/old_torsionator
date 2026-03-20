@@ -8,7 +8,7 @@ from .conect_fix import ensure_conect_with_obabel
 
 def _build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(
-        description="anti_torsionator: torsion-parameter refinement with NN potentials + GAFF2."
+        description="torsionator: torsion-parameter refinement with NN potentials + GAFF2."
     )
     p.add_argument("--pdb", required=True, help="Input PDB file.")
     p.add_argument(
