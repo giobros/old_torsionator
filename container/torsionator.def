@@ -1,10 +1,6 @@
 Bootstrap: docker
 From: nvidia/cuda:11.8.0-cudnn8-devel-ubuntu20.04
 
-%labels
-    Maintainer "you"
-    Purpose "OBIWAN + CUDA 11.8 (devel) with conda/mamba, ambertools, openbabel, TF 2.14, Torch cu118"
-
 %environment
     # Runtime env (available when you exec/run the SIF)
     export LD_LIBRARY_PATH=/usr/local/cuda/lib64:/usr/local/cuda-11.8/lib64:$LD_LIBRARY_PATH
@@ -85,11 +81,11 @@ From: nvidia/cuda:11.8.0-cudnn8-devel-ubuntu20.04
 
 %help
     Build:
-      apptainer build --fakeroot obiwan.sif OBIWAN.def   # or: sudo apptainer build ...
+      sudo apptainer torsionator.sif torsionator.def   # or: sudo apptainer build ...
 
     GPU test:
-      apptainer exec --nv obiwan.sif nvidia-smi
+      apptainer exec --nv torsionator.sif nvidia-smi
 
     Python checks:
-      apptainer exec --nv obiwan.sif python -c "import torch; print('torch', torch.__version__, 'cuda?', torch.cuda.is_available())"
-      apptainer exec --nv obiwan.sif python -c "import tensorflow as tf; print('tf', tf.__version__)"
+      apptainer exec --nv torsionator.sif python -c "import torch; print('torch', torch.__version__, 'cuda?', torch.cuda.is_available())"
+      apptainer exec --nv torsionator.sif python -c "import tensorflow as tf; print('tf', tf.__version__)"
