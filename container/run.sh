@@ -23,7 +23,7 @@ DOUBLE_ROTATION="true"           # "true" | "false" | "none", if true both clock
 
 apptainer exec \
   --nv \
-  --bind "$HOME/torsionator/torsionator:/torsionator" \
+  --bind "../torsionator:/torsionator" \
   --bind "$DATA_DIR:/data" \
   --env PYTHONPATH=/ \
   --env HOME=/root \
