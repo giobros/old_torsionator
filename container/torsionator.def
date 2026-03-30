@@ -81,10 +81,8 @@ From: nvidia/cuda:11.8.0-cudnn8-devel-ubuntu20.04
 
 %help
     Build:
-      sudo apptainer torsionator.sif torsionator.def   # or: sudo apptainer build ...
-
-    GPU test:
-      apptainer exec --nv torsionator.sif nvidia-smi
+      sudo apptainer build torsionator.sif torsionator.def 
+      (apptainer build --fakeroot torsionator.sif torsionator.def )
 
     Python checks:
       apptainer exec --nv torsionator.sif python -c "import torch; print('torch', torch.__version__, 'cuda?', torch.cuda.is_available())"
