@@ -19,6 +19,7 @@ MULTIPLICITY=6                   # max expantion multiplicity (0 to keep the GAF
 SCAN_STEP=10                     # scan steps (5,10,15,20)
 DOUBLE_ROTATION="true"           # "true" | "false" | "none", if true both clockwise (cw) and counterclockwise (ccw) scan when MCS=true
 # ------------------------------------------------
+# use apptainer or singularity 
 
 apptainer exec \
   --nv \
