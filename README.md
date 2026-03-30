@@ -25,7 +25,7 @@ All the dependencies can be loaded together using the torsionator.sif generated 
 Enter the folder container and lunch the file .sh to create the image
 ```
 cd torsionator/container
-apptainer build --fakeroot torsionator.sif torsionator.def
+sudo apptainer build torsionator.sif torsionator.def
 ```
 
 ## 3 **Prepare your host work directory**<br>
