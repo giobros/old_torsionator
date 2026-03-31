@@ -16,7 +16,7 @@ MCS="true"                       # "true" | "false" | "none"
 N_CONF=20                        # number of conformers
 RMSD=0.5                         # RMSD pruning threshold
 MULTIPLICITY=6                   # max expantion multiplicity (0 to keep the GAFF2 original one)
-SCAN_STEP=10                     # scan steps (5,10,15,20)
+STEP_SIZE=10                     # scan steps (5,10,15,20)
 DOUBLE_ROTATION="true"           # "true" | "false" | "none", if true both clockwise (cw) and counterclockwise (ccw) scan when MCS=true
 # ------------------------------------------------
 # use apptainer or singularity 
@@ -38,5 +38,5 @@ apptainer exec \
     --n_confs "$N_CONF" \
     --RMSD "$RMSD" \
     --multiplicity "$MULTIPLICITY" \
-    --scan_step "$SCAN_STEP" \
+    --step_size "$STEP_SIZE" \
     --double_rotation "$DOUBLE_ROTATION"
