@@ -478,18 +478,18 @@ def plot_shifted_energy_profiles(
     qm_path = os.path.join(base, method, "angles_vs_energies_final.txt")
     if os.path.isfile(qm_path):
         data = np.loadtxt(qm_path)
-        plt.plot(data[:, 0], data[:, 1] * CONV_EH_TO_KCAL_MOL, "o-", label=f"{method} QM")
+        plt.plot(data[:, 0], data[:, 1] * CONV_EH_TO_KCAL_MOL, "o-", label=f"{method}")
         has_data = True
 
     gaff2_old_path = os.path.join(base, "GAFF2", "old", method, "dd_ee_shifted")
     if os.path.isfile(gaff2_old_path):
         data = np.loadtxt(gaff2_old_path)
-        plt.plot(data[:, 0], data[:, 1], "s--", label=f"{method} GAFF2")
+        plt.plot(data[:, 0], data[:, 1], "s--", label= GAFF2")
         has_data = True
 
     if best_profile and os.path.isfile(best_profile):
         data = np.loadtxt(best_profile)
-        plt.plot(data[:, 0], data[:, 1], "^-.", label="GAFF2_rep")
+        plt.plot(data[:, 0], data[:, 1], "^-.", label="GAFF2 rep")
         has_data = True
 
     if has_data:
@@ -531,18 +531,18 @@ def plot_shifted_energy_profiles_mcs(
     gaff2_old_path = os.path.join(base, "GAFF2", "old", method, "dd_ee_shifted")
     if os.path.isfile(gaff2_old_path):
         data = np.loadtxt(gaff2_old_path)
-        plt.plot(data[:, 0], data[:, 1], "s--", label=f"{method} GAFF2")
+        plt.plot(data[:, 0], data[:, 1], "s--", GAFF2")
         has_data = True
 
     legacy_merged = os.path.join(base, "GAFF2", "old", "dd_ee_merged_shifted")
     if os.path.isfile(legacy_merged):
         data = np.loadtxt(legacy_merged)
-        plt.plot(data[:, 0], data[:, 1], "d--", label="GAFF2_MCS_merged")
+        plt.plot(data[:, 0], data[:, 1], "d--", label="GAFF2_MCS")
         has_data = True
 
     if best_profile and os.path.isfile(best_profile):
         data = np.loadtxt(best_profile)
-        plt.plot(data[:, 0], data[:, 1], "^-.", label="GAFF2_rep")
+        plt.plot(data[:, 0], data[:, 1], "^-.", label="GAFF2 rep")
         has_data = True
 
     if has_data:
