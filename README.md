@@ -32,7 +32,7 @@ sudo apptainer build torsionator.sif torsionator.def
 ## 3 **Prepare your host work directory**<br>
 Place your pdb input and script inside a host directory that you’ll bind to /data, e.g.:
 ```
-/$HOME/<your_folder>/
+/<your_folder_path>/
 └── <ROOT>.pdb # your input structure
 ```
 
@@ -61,7 +61,7 @@ You will find results under the following directories on the host inside your bo
 
 If BCS=true
 ```
-/<your_folder>/
+/<your_folder_path>/
 ├── conformers/
 │   ├── pdb/*.pdb 
 │   └── method/
@@ -91,7 +91,7 @@ If BCS=true
 ```
 If MCS = true:
 ```
-/<your_folder>/
+/<your_folder_path>/
 ├── conformers/
 │   ├── pdb/*.pdb 
 │   └──  method/      
@@ -115,5 +115,5 @@ If MCS = true:
 ```
 The workflow togheter with the errors are written to:
 ```
-/data/workflow.log
+/your_folder_path/workflow.log
 ```
