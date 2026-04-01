@@ -17,7 +17,7 @@ From: nvidia/cuda:11.8.0-cudnn8-devel-ubuntu20.04
     export PYTHONUNBUFFERED=1
 
 %files
-    # Run: apptainer build t.sif torsionator.def  (from the 2_cont/ directory)
+    # Run: apptainer build torsionator.sif torsionator.def  (from the container/ directory)
     obi.py /opt/obi_custom/obi.py
     ../torsionator /torsionator
 
@@ -141,14 +141,11 @@ print('TF GPUs     :', tf.config.list_physical_devices('GPU'))
 
 %help
     BUILD  (run from the 2_cont/ directory):
-      apptainer build --fakeroot t.sif torsionator.def
-      sudo apptainer build t.sif torsionator.def
+      apptainer build --fakeroot torsionator.sif torsionator.def
+      sudo apptainer build torsionator.sif torsionator.def
 
     TEST (after build):
-      apptainer test --nv t.sif
-
-    RUN:
-      bash prova.sh
+      apptainer test --nv torsionator.sif
 
     Versions:
       CUDA        11.8
