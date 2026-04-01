@@ -160,4 +160,3 @@ print('TF GPUs     :', tf.config.list_physical_devices('GPU'))
       RDKit       2023.03.3
       ASE         3.23.0
       numpy       1.23.5
-~
