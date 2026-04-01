@@ -6,7 +6,7 @@ unset PYTHONPATH
 # ---------------- USER SETTINGS ----------------
 
 ROOT="ROOT"                     # CHANGE THIS! name of your PDB, without .pdb
-DATA_DIR="$HOME/your_folder"    # CHANGE THIS! folder that contains $ROOT.pdb
+DATA_DIR="your_folder_path"     # CHANGE THIS! folder (full path) that contains $ROOT.pdb
 
 METHOD="all"                     # "all" | "mace" | "obi"
 DIHEDRAL="all"                   # "all" | "[a,b,c,d]" | "print"  (0-based indices)
