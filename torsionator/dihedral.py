@@ -484,7 +484,7 @@ def plot_shifted_energy_profiles(
     gaff2_old_path = os.path.join(base, "GAFF2", "old", method, "dd_ee_shifted")
     if os.path.isfile(gaff2_old_path):
         data = np.loadtxt(gaff2_old_path)
-        plt.plot(data[:, 0], data[:, 1], "s--", label= GAFF2")
+        plt.plot(data[:, 0], data[:, 1], "s--", label= "GAFF2")
         has_data = True
 
     if best_profile and os.path.isfile(best_profile):
@@ -531,7 +531,7 @@ def plot_shifted_energy_profiles_mcs(
     gaff2_old_path = os.path.join(base, "GAFF2", "old", method, "dd_ee_shifted")
     if os.path.isfile(gaff2_old_path):
         data = np.loadtxt(gaff2_old_path)
-        plt.plot(data[:, 0], data[:, 1], "s--", GAFF2")
+        plt.plot(data[:, 0], data[:, 1], "s--", label = "GAFF2")
         has_data = True
 
     legacy_merged = os.path.join(base, "GAFF2", "old", "dd_ee_merged_shifted")
