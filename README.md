@@ -39,7 +39,7 @@ Place your pdb input and script inside a host directory that you’ll bind to /d
 ## 4 **Run (detached, with GPU)**<br>
 The user can change and use the script run.sh inside the container folder to select which options apply to the scanning.
 The modification needed are:
- - change the folder name *your_folder* with the actual folder name in --bind "$HOME/<your_folder>:/data" and the pdb *ROOT* in flag --pdb /data/<ROOT>.pdb 
+ - change *your_folder_path* with the actual folder path in --bind "/<your_folder_path>:/data" and the pdb *ROOT* in flag --pdb /data/<ROOT>.pdb 
  - change the scanning options:
 ```
    --method all|mace|obi \
