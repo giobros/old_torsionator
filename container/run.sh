@@ -5,8 +5,8 @@ unset PYTHONPATH
 
 # ---------------- USER SETTINGS ----------------
 
-ROOT="ROOT"                     # CHANGE THIS! name of your PDB, without .pdb
-DATA_DIR="your_folder_path"     # CHANGE THIS! folder (full path) that contains $ROOT.pdb
+PDB_FILE_NAME_ROOT="ROOT"                     # CHANGE THIS! file name of your PDB FILE, without .pdb
+PDB_FILE_DIR="your_folder_path"     # CHANGE THIS! folder (full path) that contains $ROOT.pdb
 
 METHOD="all"                     # "all" | "mace" | "obi"
 DIHEDRAL="all"                   # "all" | "[a,b,c,d]" | "print"  (0-based indices)
@@ -24,12 +24,12 @@ DOUBLE_ROTATION="true"           # "true" | "false" | "none", if true both clock
 apptainer exec \
   --nv \
   --bind "../torsionator:/torsionator" \
-  --bind "$DATA_DIR:/data" \
+  --bind "${PDB_FILE_DIR}":/data" \
   --env PYTHONPATH=/ \
   --env HOME=/root \
   torsionator.sif \
   python3.9 -m torsionator.cli \
-    --pdb "/data/${ROOT}.pdb" \
+    --pdb "/data/${PDB_FILE_NAME_ROOT}.pdb" \
     --method "$METHOD" \
     --dihedral "$DIHEDRAL" \
     --conf_analysis "$CONF_ANALYSIS" \
