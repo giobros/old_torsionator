@@ -32,7 +32,7 @@ sudo apptainer build torsionator.sif torsionator.def
 ```
 
 ## 3 **Prepare your host work directory**<br>
-Place your pdb input and script inside a host directory that you’ll bind to /data, e.g.:
+Place your pdb input and script inside the "container" folder insaide the repo, that you’ll bind to /data, e.g.:
 ```
 /<your_folder_path>/
 └── <ROOT>.pdb # your input structure
