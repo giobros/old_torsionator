@@ -1,4 +1,5 @@
-wget https://github.com/apptainer/apptainer/releases/download/v1.4.5/apptainer_1.4.5_amd64.deb
-sudo apt install -y ./apptainer_1.4.5_amd64.deb
-wget https://github.com/apptainer/apptainer/releases/download/v1.4.5/apptainer-suid_1.4.5_amd64.deb
-sudo dpkg -i ./apptainer-suid_1.4.5_amd64.deb
+$ wget https://github.com/apptainer/apptainer/releases/download/v1.4.5/apptainer_1.4.5_amd64.deb
+$ sudo apt install -y ./apptainer_1.4.5_amd64.deb
+For the setuid installation do above commands first and then these:
+$ wget https://github.com/apptainer/apptainer/releases/download/v1.4.5/apptainer-suid_1.4.5_amd64.deb
+$ sudo dpkg -i ./apptainer-suid_1.4.5_amd64.deb
