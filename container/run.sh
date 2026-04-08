@@ -6,7 +6,7 @@ unset PYTHONPATH
 # ---------------- USER SETTINGS ----------------
 
 PDB_FILE_NAME_ROOT="ROOT"           # CHANGE THIS! file name of your PDB FILE, without .pdb
-PDB_FILE_DIR="your_folder_path"     # CHANGE THIS! folder (full path) that contains $ROOT.pdb
+PDB_FILE_DIR="your_folder_path"     # CHANGE THIS! folder (full path) that contains $PDB_FILE_NAME_ROOT.pdb
 
 METHOD="all"                     # "all" | "mace" | "obi", NN calculator to use (default: obi)
 DIHEDRAL="all"                   # "all" | "[a,b,c,d]" | "print"  (0-based indices), 
