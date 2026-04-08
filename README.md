@@ -58,8 +58,8 @@ The modification needed are:
 Suggestion: print the dihedrals before passing the wanted one, the code should recognize your input but my suggestion is to check the code-preferred dihedral definition.
 
 ## 5. **Where outputs are written**<br>
-By default the script uses BASE_DIR = "/data"
-You will find results under the following directories on the host inside your bound folder:
+
+You will find results under the following directories on the host inside your PDB_FILE_DIR:
 
 If BCS=true
 ```
