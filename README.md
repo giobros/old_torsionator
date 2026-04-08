@@ -43,8 +43,7 @@ Place your pdb input and script inside the "container" folder insaide the repo, 
 
 ## 4 **Run**<br>
 The user can change and use the script run.sh inside the "container" folder to select which options apply to the scanning.
-The modification needed are:
- - change the scanning options:
+To change the scanning options modify:
 ```
 
 PDB_FILE_NAME_ROOT="NAME"        # CHANGE THIS! file NAME of your PDB file, without .pdb
