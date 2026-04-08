@@ -5,19 +5,28 @@ unset PYTHONPATH
 
 # ---------------- USER SETTINGS ----------------
 
-PDB_FILE_NAME_ROOT="ROOT"                     # CHANGE THIS! file name of your PDB FILE, without .pdb
+PDB_FILE_NAME_ROOT="ROOT"           # CHANGE THIS! file name of your PDB FILE, without .pdb
 PDB_FILE_DIR="your_folder_path"     # CHANGE THIS! folder (full path) that contains $ROOT.pdb
 
-METHOD="all"                     # "all" | "mace" | "obi"
-DIHEDRAL="all"                   # "all" | "[a,b,c,d]" | "print"  (0-based indices)
+METHOD="all"                     # "all" | "mace" | "obi", NN calculator to use (default: obi)
+DIHEDRAL="all"                   # "all" | "[a,b,c,d]" | "print"  (0-based indices), 
+                                 #     "all" to scan all rotatable bonds
+                                 #     "print" to list them
+                                 #     "[a,b,c,d]" for a specific one.
 CONF_ANALYSIS="false"            # "true" | "false" | "none"
-BCS="false"                      # "true" | "false" | "none"
-MCS="true"                       # "true" | "false" | "none"
+                                 #      "false" → scan minimized input even if clashes exist; 
+                                 #      "true"  → generate conformers and use a clash-free starting geometry
+BCS="false"                      # "true" | "false" | "none"      Best-Conformer-Scan fallback: if no clash-free conformer is found
+                                 #      "false" → abort; 
+                                 #      "true" → use the conformer with lowest LJ energy.
+MCS="true"                       # "true" | "false" | "none"      Multi-Conformer Scan: use minimum-energy collapse per angle across all conformers.
 N_CONF=20                        # number of conformers
 RMSD=0.5                         # RMSD pruning threshold
 MULTIPLICITY=6                   # max expantion multiplicity (0 to keep the GAFF2 original one)
 STEP_SIZE=10                     # scan steps (5,10,15,20)
-DOUBLE_ROTATION="true"           # "true" | "false" | "none", if true both clockwise (cw) and counterclockwise (ccw) scan when MCS=true
+DOUBLE_ROTATION="true"           # "true" | "false" | "none", 
+                                 #     "true" both clockwise (cw) counterclockwise (ccw) scan when MCS=true
+                                 #     "false" just clockwise (cw)
 # ------------------------------------------------
 # use apptainer or singularity 
 
