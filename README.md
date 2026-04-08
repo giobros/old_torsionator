@@ -38,7 +38,7 @@ sudo apptainer build torsionator.sif torsionator.def
 Place your pdb input and script inside the "container" folder insaide the repo, that you’ll bind to /data, e.g.:
 ```
 /<your_folder_path>/
-└── <ROOT>.pdb # your input structure
+└── <NAME>.pdb # your input structure
 ```
 
 ## 4 **Run**<br>
@@ -93,7 +93,7 @@ If BCS=true
 │       ├── GAFF2/old/method/           ← old GAFF2 fit
 │       ├── GAFF2/new/method/  
 │       └── a_b_c_d.png                        # plotted profile (kcal/mol)
-└── parameters/<ROOT>_<method>.frcmod  # frcmod with updated DIHE lines
+└── parameters/<NAME>_<method>.frcmod  # frcmod with updated DIHE lines
 
 
 ```
@@ -117,7 +117,7 @@ If MCS = true:
 │       ├── GAFF2/old/method/           ← old GAFF2 fit
 │       ├── GAFF2/new/method/  
 │       └── a_b_c_d_MCS.png                        # plotted profile (kcal/mol)
-└── parameters/<ROOT>_<method>.frcmod  # frcmod with updated DIHE lines
+└── parameters/<NAME>_<method>.frcmod  # frcmod with updated DIHE lines
 
 
 ```
