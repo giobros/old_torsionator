@@ -22,7 +22,7 @@ DOUBLE_ROTATION="true"           # "true" | "false" | "none", "false" →  just 
 apptainer exec \
   --nv \
   --bind "../torsionator:/torsionator" \
-  --bind "${PDB_FILE_DIR}":/data" \
+  --bind "${PDB_FILE_DIR}":/data \
   --env PYTHONPATH=/ \
   --env HOME=/root \
   torsionator.sif \
